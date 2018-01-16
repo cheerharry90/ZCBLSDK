@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZCBLSDK"
-  s.version      = “1.0.0”
-  s.summary      = "A short description of ZCBLSDK."
+  s.version      = "1.0.0"
+  s.summary      = "ZCBLSDK is about video survey"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+It used to video survey, you can use it to do video survey
                    DESC
 
   s.homepage     = "https://github.com/cheerharry90/ZCBLSDK.git"
@@ -38,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT (example)"
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, “8.0”
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,9 +92,9 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "ZCBLSDK/ZCBLSDK.framework/Headers/*.{h}"
-  # s.exclude_files = "Classes/Exclude"
-  s.vendored_frameworks = 'ZCBLSDK/ZCBLSDK.framework'
-  s.public_header_files = 'ZCBLSDK/ZCBLSDK.framework/Headers/ZCBLSDK.h’
+  s.exclude_files = "ZCBLSDK/Exclude"
+  s.vendored_frameworks = "ZCBLSDK/ZCBLSDK.framework"
+  s.public_header_files = "ZCBLSDK/ZCBLSDK.framework/Headers/ZCBLSDK.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = ""ZCBLSDK/ZCBLSDK.bundle/**/*.png""
+  s.resources = "ZCBLSDK/ZCBLSDK.bundle/**/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -132,6 +133,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "AFNetworking"
-
+    s.dependency "AFNetworking"
+    s.dependency "WilddogVideoRoom"
+    s.dependency "Wilddog/Sync"
 end
