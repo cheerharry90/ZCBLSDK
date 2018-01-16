@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZCBLSDK"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "ZCBLSDK is about video survey"
   s.description  = <<-DESC
 It used to video survey, you can use it to do video survey
@@ -11,13 +11,11 @@ It used to video survey, you can use it to do video survey
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/cheerharry90/ZCBLSDK.git", :tag => "#{s.version}" }
   s.source_files  = "ZCBLSDK/ZCBLSDK.framework/Headers/*.{h}"
-  s.preserve_paths = "ZCBLSDK/ZCBLSDK.framework"
+  # s.preserve_paths = "ZCBLSDK/ZCBLSDK.framework"
   s.public_header_files = "ZCBLSDK/ZCBLSDK.framework/Headers/ZCBLSDK.h"
   s.resources = "ZCBLSDK/ZCBLSDK.bundle/**/*.png"
   s.requires_arc = true
-
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency "AFNetworking"
-    s.dependency "WilddogVideoRoom"
-    s.dependency "Wilddog/Sync"
+  s.dependency "AFNetworking"
+  s.dependency "WilddogVideoRoom"
+  s.dependency "Wilddog/Sync"
 end
