@@ -13,8 +13,10 @@ It used to video survey, you can use it to do video survey
   s.source_files  = "ZCBLSDK/ZCBLSDK.framework/Headers/*.{h}"
   # s.preserve_paths = "ZCBLSDK/ZCBLSDK.framework"
   s.public_header_files = "ZCBLSDK/ZCBLSDK.framework/Headers/ZCBLSDK.h"
-  s.resources = "ZCBLSDK/ZCBLSDK.bundle/**/*.png"
+  s.resources = "ZCBLSDK/ZCBLSDK.bundle"
   s.requires_arc = true
+  s.vendored_frameworks = 'ZCBLSDK/ZCBLSDK.framework'
+  s.frameworks = 'UIKit','Foundation'
   s.dependency "AFNetworking"
   s.dependency "WilddogVideoRoom"
   s.dependency "Wilddog/Sync"
