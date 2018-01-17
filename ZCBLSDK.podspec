@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
   s.resources = "ZCBLSDK.bundle"
   s.requires_arc = true
  
-  s.source_files = "Classes","Classes/**/*.{h}"
-  s.vendored_frameworks = 'Frameworks/ZCBLSDK.framework'
+  s.source_files = "Frameworks","ZCBLSDK.framework/**/*.{h}"
+  s.vendored_frameworks = "Frameworks","ZCBLSDK.framework"
+  s.preserve_paths = "Frameworks","ZCBLSDK.framework"
   #s.public_header_files = 'ZCBLSDK.framework/Headers/ZCBLSDK.h'
 
   #s.vendored_frameworks = "ZCBLSDK.framework"
@@ -23,7 +24,7 @@ Pod::Spec.new do |s|
   s.dependency "AFNetworking"
   s.dependency "WilddogVideoRoom"
   s.dependency "Wilddog/Sync"
-  s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WilddogVideoRoom"}
-  s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Wilddog/Sync"}
+  #s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WilddogVideoRoom"}
+  #s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Wilddog/Sync"}
 
 end
