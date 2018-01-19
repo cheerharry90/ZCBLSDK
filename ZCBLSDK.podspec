@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = "Frameworks","ZCBLSDK.framework/**/*.{h}"
   s.vendored_frameworks = "Frameworks","ZCBLSDK.framework"
   s.preserve_paths = "Frameworks","ZCBLSDK.framework"
-  #s.public_header_files = 'ZCBLSDK.framework/Headers/ZCBLSDK.h'
+  s.public_header_files = "Frameworks",'ZCBLSDK.framework/Headers/ZCBLSDK.h'
 
   #s.vendored_frameworks = "ZCBLSDK.framework"
   #s.preserve_paths = "ZCBLSDK.framework"
