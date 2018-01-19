@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
   #s.public_header_files = "ZCBLSDK","ZCBLSDK.framework/Headers/ZCBLSDK.h"
 
   s.frameworks = "UIKit","Foundation"
-  s.dependency "AFNetworking"
   s.dependency "WilddogVideoRoom"
   s.dependency "Wilddog/Sync"
   #s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WilddogVideoRoom"}
